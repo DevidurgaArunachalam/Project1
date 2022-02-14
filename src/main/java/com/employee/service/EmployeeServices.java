@@ -9,10 +9,9 @@ public interface EmployeeServices {
     
     void addEmployee(final Employee employee);
 
-	void viewEmployeeDetails();
+    void viewEmployeeDetails();
 
-	void updateEmployeeDetails(final Employee employee);
+    void updateEmployeeDetails(final Employee employee);
 	
-	void deleteEmployee(final int employeeId);
-	
+    void deleteEmployee(final int employeeId);	
 }
