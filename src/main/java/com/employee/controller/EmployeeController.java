@@ -16,25 +16,25 @@ import java.util.Map;
 public class EmployeeController {
     private final static EmployeeServiceImplVersion2 EMPLOYEE_IMPL = new EmployeeServiceImplVersion2();
     
-	public boolean addEmployee(final Employee employee) {
-	    return EMPLOYEE_IMPL.addEmployee(employee);
-	}
+    public boolean addEmployee(final Employee employee) {
+        return EMPLOYEE_IMPL.addEmployee(employee);
+    }
 
-	public Map<Integer, Employee> viewEmployeeDetails() {
+    public Map<Integer, Employee> viewEmployeeDetails() {
         return EMPLOYEE_IMPL.viewEmployeeData();  
-	}
+    }
 	 
-	public boolean updateEmployeeDetails(Employee employee) {
-	    return EMPLOYEE_IMPL.updateEmployeeDetails(employee);
-	}
+    public boolean updateEmployeeDetails(Employee employee) {
+	return EMPLOYEE_IMPL.updateEmployeeDetails(employee);
+    }
 
-	public boolean deleteEmployee(int employeeId) {
-	    return EMPLOYEE_IMPL.deleteEmployee(employeeId);
+    public boolean deleteEmployee(int employeeId) {
+	return EMPLOYEE_IMPL.deleteEmployee(employeeId);
     }
 	
-	public static boolean checkEmployeeName(final String employeeName) {
+    public static boolean checkEmployeeName(final String employeeName) {
         return EmployeeDetailsValidation.checkEmployeeName(employeeName);
-	}
+    }
 
     public static boolean checkContactNumber(String contactNumber) {
         return EmployeeDetailsValidation.checkContactNumber(contactNumber);
@@ -65,7 +65,6 @@ public class EmployeeController {
     }
     
     public static boolean userChoiceValidation(final String userChoice) {
-        return EmployeeServiceImplVersion2.validateUserChoice(userChoice);
-        
+        return EmployeeServiceImplVersion2.validateUserChoice(userChoice); 
     }
 }
