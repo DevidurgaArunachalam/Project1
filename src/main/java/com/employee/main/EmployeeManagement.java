@@ -44,19 +44,19 @@ public class EmployeeManagement {
 			switch (choice) {
 			case 1:
 			    EmployeeDetails.addEmployee();
-				break;
+			    break;
 			case 2:
 			    EmployeeDetails.viewEmployeeDetails();
-				break;
+			    break;
 			case 3:
 			    EmployeeDetails.updateEmployeeDetails();
-				break;
+			    break;
 			case 4:
 			    EmployeeDetails.deleteEmployee();
-				break;
+			    break;
  			default:
 			    EmployeeDetails.SCANNER.close();
-				System.exit(0);
+			    System.exit(0);
 			}
 		} while (true);
    	}
