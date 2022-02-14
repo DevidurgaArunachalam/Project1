@@ -16,17 +16,17 @@ import java.util.Map;
  */
 public class EmployeeServiceImpl implements EmployeeServices {
     
-	private final static Map<Integer, Employee> EMPLOYEEDETAILS = new LinkedHashMap<Integer, Employee>();
+    private final static Map<Integer, Employee> EMPLOYEEDETAILS = new LinkedHashMap<Integer, Employee>();
 	
     /**
-	 * <p>
-	 *    Adds a new employee details. Here employee id is set as key andother details like 
-	 *    employee name, salary, contact number, emailId and dateofbirth are stored in employe object.
-	 * </p>  
-	 *  
-	 * @param employee  
-	 */
-	public void addEmployee(final Employee employee) {
+     * <p>
+     *    Adds a new employee details. Here employee id is set as key andother details like 
+     *    employee name, salary, contact number, emailId and dateofbirth are stored in employe object.
+     * </p>  
+     *  
+     * @param employee  
+     */
+    public void addEmployee(final Employee employee) {
         
         if (EMPLOYEEDETAILS.containsKey(employee.getEmployeeId())) {
             throw new IdAlreadyExistsException("The employeeId already exists!!...");
@@ -37,20 +37,20 @@ public class EmployeeServiceImpl implements EmployeeServices {
     }
 
     /**
-	 * Views employee details that are stored in the map and it gives both key and values 
-	 */
-	public void viewEmployeeDetails() {
+     * Views employee details that are stored in the map and it gives both key and values 
+     */
+    public void viewEmployeeDetails() {
         for (Integer data : EMPLOYEEDETAILS.keySet()) {
             System.out.println(EMPLOYEEDETAILS.get(data));
         }
     }
 
     /**
-	 * Deletes the employee details by getting employeeId to check and delete 
-	 * 
-	 * @param employeeId 
-	 */
-	public void deleteEmployee(final int employeeId) {
+     * Deletes the employee details by getting employeeId to check and delete 
+     * 
+     * @param employeeId 
+     */
+    public void deleteEmployee(final int employeeId) {
 	    
         if (EMPLOYEEDETAILS.containsKey(employeeId)) {
             EMPLOYEEDETAILS.remove(employeeId); 
@@ -60,15 +60,15 @@ public class EmployeeServiceImpl implements EmployeeServices {
     }
 	
     /**
-	 * <p>
-	 *    Updates the employee details by getting the user choice to update as per
-	 *    their choice to update. Calls the methods in EmployeeManagement
-	 *    class to update as per user choice.
-	 * </p>
-	 *    
-	 * @param employee
-	 */
-	public void updateEmployeeDetails(final Employee employee) {
+     * <p>
+     *    Updates the employee details by getting the user choice to update as per
+     *    their choice to update. Calls the methods in EmployeeManagement
+     *    class to update as per user choice.
+     * </p>
+     *    
+     * @param employee
+     */
+    public void updateEmployeeDetails(final Employee employee) {
 	    
         if (EMPLOYEEDETAILS.containsKey(employee.getEmployeeId())) { 
             Employee employeeData = EMPLOYEEDETAILS.get(employee.getEmployeeId());
