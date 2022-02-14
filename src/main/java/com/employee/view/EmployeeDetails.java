@@ -23,93 +23,93 @@ import java.sql.Date;
  */
 public class EmployeeDetails {
     
-	public static final Scanner SCANNER = new Scanner(System.in);
-	public static final EmployeeController EMPLOYEECONTROLLER = new EmployeeController();
-	private static final Logger LOGGER = Logger.getLogger(EmployeeDetails.class);
+    public static final Scanner SCANNER = new Scanner(System.in);
+    public static final EmployeeController EMPLOYEECONTROLLER = new EmployeeController();
+    private static final Logger LOGGER = Logger.getLogger(EmployeeDetails.class);
 
-    /**
-	 * Used to get the user Id in the numerical values
-	 * 
-	 * @return employeeId
-     */
-	public static int getEmployeeId() {
-	    LOGGER.info("Enter the EmployeeId:\t[Back To Main: $ ]");
-		final String employeeId = SCANNER.nextLine().trim();
-		final boolean isIdCorrect = EmployeeController.checkEmployeeId(employeeId);
+   /**
+    * Used to get the user Id in the numerical values
+    * 
+    * @return employeeId
+    */
+   public static int getEmployeeId() {
+       LOGGER.info("Enter the EmployeeId:\t[Back To Main: $ ]");
+       final String employeeId = SCANNER.nextLine().trim();
+       final boolean isIdCorrect = EmployeeController.checkEmployeeId(employeeId);
 
-        if ("$".equals(employeeId)) {
-            EmployeeManagement.selectChoice();
-        }
+       if ("$".equals(employeeId)) {
+           EmployeeManagement.selectChoice();
+       }
         
-		if (isIdCorrect) {
+         if (isIdCorrect) {
             return Integer.parseInt(employeeId);
-        } else {
+         } else {
             System.out.println("Invalid Input!!!... Numerical Values from 0-9)");
             return getEmployeeId();
         }
-	}
+    }
 
     /**
-	 * <p>
-	 *    Used to get the user name.
-	 *    By calling the EmployeeDetailsValidation class to validate the input. 
-	 * </p> 
-	 *   
-	 * @return employeeName
-	 */
-	public static String getEmployeeName() {
-	    LOGGER.info("Enter the EmployeeName :\t[Back To Main: $ ]");
-	    final String employeeName = SCANNER.nextLine().trim();
-		final boolean isNameCorrect = EmployeeController.checkEmployeeName(employeeName);
+     * <p>
+     *    Used to get the user name.
+     *    By calling the EmployeeDetailsValidation class to validate the input. 
+     * </p> 
+     *   
+     * @return employeeName
+     */
+    public static String getEmployeeName() {
+	 LOGGER.info("Enter the EmployeeName :\t[Back To Main: $ ]");
+	 final String employeeName = SCANNER.nextLine().trim();
+         final boolean isNameCorrect = EmployeeController.checkEmployeeName(employeeName);
 
         if ("$".equals(employeeName)) {
             EmployeeManagement.selectChoice();
         }
         
-		if (isNameCorrect) {
-		    return employeeName;
-		} else {
-		    System.out.println("Invalid Input!!!...\tEnter Valid Alphabets(a-z)");
-		    return getEmployeeName();
-		}
+        if (isNameCorrect) {
+	    return employeeName;
+	} else {
+	    System.out.println("Invalid Input!!!...\tEnter Valid Alphabets(a-z)");
+	    return getEmployeeName();
 	}
+    }
 
     /**
-	 * <p>
-	 *    Used to get the contact number.
-	 *    By calling the EmployeeDetailsValidation class to validate the input.
-	 * </p>   
-	 * 
-	 * @return contactNumber
-	 */
-	public static String getContactNumber() {
-	    LOGGER.info("Enter the Contact Number :\t[Back To Main: $ ]");
-	    final String contactNumber = SCANNER.nextLine().trim();
-		final boolean isNumberCorrect = EmployeeController.checkContactNumber(contactNumber);
+     * <p>
+     *    Used to get the contact number.
+     *    By calling the EmployeeDetailsValidation class to validate the input.
+     * </p>   
+     * 
+     * @return contactNumber
+     */
+    public static String getContactNumber() {
+	 LOGGER.info("Enter the Contact Number :\t[Back To Main: $ ]");
+	 final String contactNumber = SCANNER.nextLine().trim();
+         final boolean isNumberCorrect = EmployeeController.checkContactNumber(contactNumber);
 		
-		if ("$".equals(contactNumber)) {
-		    EmployeeManagement.selectChoice();
-		}
+	 if ("$".equals(contactNumber)) {
+	    EmployeeManagement.selectChoice();
+	 }
 		
-		if (isNumberCorrect) {
+	 if (isNumberCorrect) {
             return contactNumber;
-        } else {
+         } else {
             System.out.println("Invalid Input!!!...\tEnter Valid 10 Digit Number");
             return getContactNumber();
         }
-	}
+    }
 
     /**
-	 * <p>
-	 *    Used to get employee salary details.
-	 *    By calling the EmployeeDetailsValidation class to validate the input.
-	 * </p>  
-	 *  
-	 * @return salary
-	 */
-	public static String getEmployeeSalary() {
-	    LOGGER.info("Enter the Salary :\t[Back To Main: $ ]");
-	    final String salary = SCANNER.nextLine().trim();
+     * <p>
+     *    Used to get employee salary details.
+     *    By calling the EmployeeDetailsValidation class to validate the input.
+     * </p>  
+     *  
+     * @return salary
+     */
+    public static String getEmployeeSalary() {
+        LOGGER.info("Enter the Salary :\t[Back To Main: $ ]");
+	final String salary = SCANNER.nextLine().trim();
         final boolean isSalaryCorrect = EmployeeController.checkSalary(salary);
 
         if ("$".equals(salary)) {
@@ -122,34 +122,34 @@ public class EmployeeDetails {
             System.out.println("Invalid Input!!!...\tEnter Numerical Values(0-9)");
             return getEmployeeSalary();
         }
-	}
+    }
 
     /**
-	 * <p>
-	 *    Used to get the email Id.
-	 *    By calling the EmployeeDetailsValidation class to validate the input.
-	 * </p> 
-	 *   
-	 * @return emailId
+     * <p>
+     *    Used to get the email Id.
+     *    By calling the EmployeeDetailsValidation class to validate the input.
+     * </p> 
+     *   
+     * @return emailId
      */
-	public static String getEmailId() {
-	    LOGGER.info("Enter the EmailId :\t[Back To Main: $ ]");
-		final String emailId = (SCANNER.nextLine()).trim();
-		final boolean isEmailIdCorrect = EmployeeController.checkEmailId(emailId);
+    public static String getEmailId() {
+        LOGGER.info("Enter the EmailId :\t[Back To Main: $ ]");
+	final String emailId = (SCANNER.nextLine()).trim();
+	final boolean isEmailIdCorrect = EmployeeController.checkEmailId(emailId);
 
         if ("$".equals(emailId)) {
             EmployeeManagement.selectChoice();
         }
         
-		if (isEmailIdCorrect) {
-		    return emailId;
-		} else {
-		    System.out.println("Invalid Input!!!...");
-		    return getEmailId();
-		}
+	if (isEmailIdCorrect) {
+	    return emailId;
+	} else {
+	    System.out.println("Invalid Input!!!...");
+	    return getEmailId();
 	}
+    }
 	
-	/**
+    /**
      * <p>
      *    Used to get the user choice.
      *    By calling the EmployeeDetailsValidation class to validate the input.
@@ -157,8 +157,8 @@ public class EmployeeDetails {
      *   
      * @return emailId
      */
-	public static String getUserChoice() {
-	    LOGGER.info("Enter the EmailId :\t[Back To Main: $ ]");
+    public static String getUserChoice() {
+	LOGGER.info("Enter the EmailId :\t[Back To Main: $ ]");
         final String userChoice = (SCANNER.nextLine()).trim();
         final boolean isUserChoiceValid = EmployeeController.userChoiceValidation(userChoice);
         
@@ -168,33 +168,33 @@ public class EmployeeDetails {
             System.out.println("Please Enter Valid Choice!!!...");
             return EmployeeDetails.getUserChoice();
         }
-	}
+    }
 
     /**
-	 * Used to get the date of birth of the employee
-	 */
-	public static Date getDateOfJoining() {
-	    LOGGER.info("Enter employee date of joining (YYYY-MM-dd) :\t[Back To Main: $ ]"); 
-	    String dateOfJoining = SCANNER.nextLine().trim();
-		boolean isDateCorrect = false;
+     * Used to get the date of birth of the employee
+     */
+    public static Date getDateOfJoining() {
+        LOGGER.info("Enter employee date of joining (YYYY-MM-dd) :\t[Back To Main: $ ]"); 
+	String dateOfJoining = SCANNER.nextLine().trim();
+	boolean isDateCorrect = false;
 
         if ("$".equals(dateOfJoining)) {
             EmployeeManagement.selectChoice();
         } 
         
-		try {
-		    isDateCorrect = EmployeeController.dateValidation(dateOfJoining);
-		} catch (InvalidInputException exception) {
-		    LOGGER.info(exception);
-		}
+	try {
+	    isDateCorrect = EmployeeController.dateValidation(dateOfJoining);
+	} catch (InvalidInputException exception) {
+	    LOGGER.info(exception);
+	}
 		
-		if (isDateCorrect) {
-		    return Date.valueOf(dateOfJoining);
-		} else {
-		    System.out.println("Invalid Input!!!...");
-		    return getDateOfJoining();
-		}
-	}	
+	if (isDateCorrect) {
+	    return Date.valueOf(dateOfJoining);
+	} else {
+	    System.out.println("Invalid Input!!!...");
+	    return getDateOfJoining();
+	}
+    }	
 	
     /**
      * <p>
@@ -218,16 +218,16 @@ public class EmployeeDetails {
             final String contactNumber = EmployeeDetails.getContactNumber();
             final Date dateOfJoining = EmployeeDetails.getDateOfJoining();
             final Employee employee = new Employee(employeeId, employeeName, salary, contactNumber, dateOfJoining);
-       try { 
+        try { 
             final boolean isAdded = EMPLOYEECONTROLLER.addEmployee(employee);
             
             if (isAdded) {
                 LOGGER.info("Successfully Added"); 
             } 
-        } catch (ConenctionNotFoundException exception) {
+         } catch (ConenctionNotFoundException exception) {
             LOGGER.error(exception);
             } 
-        } 
+    } 
     
     /**
      * Used to view the employee details
