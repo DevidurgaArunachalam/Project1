@@ -41,8 +41,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
             return preparedStatement.executeUpdate() > 0;
         } catch (SQLException exception) {
-            throw new ConenctionNotFoundException("Connection Error!!!...");
-           
+            throw new ConenctionNotFoundException("Connection Error!!!...");    
         }
     }
 
