@@ -9,15 +9,16 @@ import java.sql.DriverManager;
  * @author DeviDurgaA
  */
 public class DBConnection {
+    
     private static final String DATABASEURL = "jdbc:mysql://localhost:3306/employeedao";
     private static final String USERNAME = "root";
     private static final String DATABASEPASSWORD = "Deepi@123";
     
-   /**
-    * Determines the connection for database 
-    *    
-    * @return connection
-    */
+    /**
+     * Determines the connection for database 
+     *    
+     * @return connection
+     */
     public Connection getConnection() { 
         Connection connection = null;
         

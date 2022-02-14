@@ -8,35 +8,32 @@ import java.sql.Date;
 public class Employee {
    
     /**
-	* Represents employee name, salary, contact number,emailId and dateOfBirth.
-	*/
+	 * Represents employee name, salary, contact number,and dateOfBirth.
+	 */
 	private int  employeeId ;
 	private String employeeName;
 	private String salary;
 	private String contactNumber;
-	private String emailId;
-	private Date dateOfBirth;
+	private Date dateOfJoining;
 	
 	public Employee() {
 		super();
 	}
 
-   /**
-	* This Constructor creates an employee data
-	* @param employeeId      
-	* @param employeeName    
-	* @param salary          
-	* @param contactNumber  
-	* @param emailId         
-	* @param dateOfBirth            
-	*/
-	public Employee (int  employeeId, String employeeName, String salary, String contactNumber, String emailId, Date dateOfBirth) {
+    /**
+	 * This Constructor creates an employee data
+	 * @param employeeId      
+	 * @param employeeName    
+	 * @param salary          
+	 * @param contactNumber         
+	 * @param dateOfBirth            
+	 */
+	public Employee (int  employeeId, String employeeName, String salary, String contactNumber, Date dateOfJoining) {
 		this.employeeId = employeeId;
 		this.employeeName = employeeName;
 		this.salary = salary;
 		this.contactNumber = contactNumber;
-		this.emailId = emailId;
-		this.dateOfBirth = dateOfBirth;
+		this.dateOfJoining = dateOfJoining;
 	}
 
 	public int getEmployeeId() {
@@ -55,12 +52,8 @@ public class Employee {
 		return contactNumber;
 	}
 
-	public String getEmailId() {
-		return emailId;
-	}
-
-	public Date getDateOfBirth() {
-		return dateOfBirth;
+	public Date getDateOfJoining() {
+		return dateOfJoining;
 	}
 
 	public void setEmployeeId(int employeeId) {
@@ -79,18 +72,12 @@ public class Employee {
 		this.contactNumber = contactNumber;
 	}
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
-	
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
+	public void setDateOfJoining(Date dateOfBirth) {
+		this.dateOfJoining = dateOfBirth;
 	}
 	
 	public String toString() {
 		return new StringBuffer().append("\n").append("EmployeeId:").append(employeeId).append("\n").append("Name:").append(employeeName).append("\n").append("Salary:").append(salary).
-				append("\n").append("Contact Number:").append(contactNumber).append("\n").append("EmailID:").
-				append(emailId).append("\n").append("DateOfBirth:").append(dateOfBirth).append("\n").toString();
+				append("\n").append("Contact Number:").append(contactNumber).append("\n").append("DateOfJoining:").append(dateOfJoining).append("\n").append("\n").toString();
 	}
-
 }

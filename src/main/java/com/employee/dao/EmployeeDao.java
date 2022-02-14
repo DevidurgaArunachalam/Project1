@@ -8,6 +8,7 @@ import com.employee.model.Employee;
  * Inteface created for Employee database 
  */
 public interface EmployeeDao {
+    
     boolean addEmployee(final Employee employee);
     
     Map<Integer, Employee> viewEmployeeData();

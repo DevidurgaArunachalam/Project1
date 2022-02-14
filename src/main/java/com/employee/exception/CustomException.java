@@ -33,4 +33,11 @@ public static class IdNotFoundException extends CustomException {
         super(message);
     } 
 }
+
+public static class InvalidInputException extends CustomException {
+
+    public InvalidInputException(String message) {
+        super(message);
+    }
+}
 }
